@@ -528,3 +528,149 @@ textarea {
   border-radius: 5px;
   margin-top: 20px;
 }
+
+/* table view */
+
+@media (max-width: 1060px) {
+  html {
+    font-size: 15px;
+  }
+  .header-heading .brand-name {
+    font-size: 4rem;
+  }
+  .circle {
+    width: 350px;
+    height: 350px;
+  }
+  .header-img {
+    width: 350px;
+    height: 350px;
+  }
+
+  /* about */
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .info {
+    width: 100%;
+  }
+  .image-container {
+    width: 320px;
+  }
+  .about-img {
+    width: 100%;
+  }
+
+  /* timeline */
+  .card-container {
+    margin-top: 20px;
+  }
+  .card {
+    width: 70%;
+    margin: auto;
+  }
+  .card-container .card::before {
+    display: none;    
+  }
+  .card-container .card::after {
+    right: 50% !important;
+    z-index: -1;
+  }
+}
+
+/* small screen */
+
+@media (max-width: 750px) {
+  .toggle-btn {
+    position: absolute;
+    right: 10vw;
+    width: 50px;
+    height: 40px;
+    border: 1px solid #cecece;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    justify-content: center;
+    align-items: center;
+  }
+  .toggle-btn span {
+    width: 60%;
+    height: 1px;
+    background: #cecece;
+  }
+  .toggle-btn.active span:nth-child(2) {
+    display: none;
+  }
+  .toggle-btn.active span:nth-child(1) {
+    position: absolute;
+    transform: rotate(45deg);
+  }
+  .toggle-btn.active span:nth-child(3) {
+    position: absolute;
+    transform: rotate(-45deg);
+  }
+  .nav-links-container.active {
+    display: block;
+  }
+  .nav-links-container {
+    position: absolute;
+    top: 80%;
+    flex-direction: column;
+    width: calc(100% + 20vw);
+    left: 0;
+    background: #fcfcfc;
+    display: none;
+  }
+  .nav-link {
+    height: 60px;
+    height: 100%;
+  }
+  .links {
+    display: block;
+    padding: 20px 10vw;
+  }
+  .links:hover, .links.active {
+    background: rgba(0, 0, 0, 0.1);
+  }
+  .header {
+    height: auto;
+    padding: 100px 10vw;
+    flex-direction: column-reverse;
+    gap: 100px;
+  }
+  .content {
+    text-align: center;
+  }
+  .circle {
+    width: 250px;
+    height: 250px;
+  }
+  .header-img {
+    width: 300px;
+    height: 300px;
+  }
+
+  /* timeline */
+  .card-container {
+    padding: 0;
+  }
+  .card {
+    width: 100%;
+  }
+  .project-wrapper {
+    flex-direction: column;
+    gap: 5px !important;
+  }
+  .project-card.active .project-thumbnail {
+    width: 350px;
+    height: 200px;
+  }
+  .project-card.active .project-body {
+    height: auto;
+    width: 300px;
+  }
+}
