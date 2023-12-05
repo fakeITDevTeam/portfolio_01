@@ -1,3 +1,14 @@
+// nav toggle
+
+let links = document.querySelectorAll('.links');
+links.forEach((link) => {
+  link.addEventListener('click', () => {
+    links.forEach(item => item.classList.remove('active'));
+    link.classList.add('active');
+  })
+})
+
+
 // project cards open and close functions
 
 let projects = document.querySelectorAll('.project-card');
